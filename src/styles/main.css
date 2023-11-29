@@ -1,0 +1,20 @@
+*:not(head > *) {
+  all: unset;
+}
+
+div, body {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  position: relative;
+}
+
+button:active {
+  top: 1px;
+}
+
+#App {
+  font-family: sans-serif;
+}
