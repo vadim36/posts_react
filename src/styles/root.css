@@ -1,5 +1,15 @@
 :root {
-  --primary-color: hsl(0 0% 100%);
-  --secondary-color: hsl(0 0% 0%);
+  --primary-color: hsl(0, 0%, 100%);
+  --secondary-color: hsl(0, 0%, 0%);
   --accent-color: hsl(222, 83%, 55%);
+  --danger-color: hsl(0, 80%, 50%);
+  --success-color: hsl(120, 50%, 55%);
+
+  --xl-fz: 3.5rem;
+  --l-fz: 2.5rem;
+  --m-fz: 1.5rem;
+
+  --r-font: 400;
+  --m-font: 500;
+  --b-font: 600; 
 }

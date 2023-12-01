@@ -1,0 +1,20 @@
+@use '../../styles/root.css' as *;
+
+.button {
+  color: var(--primary-color);
+  padding: .25rem .5rem;
+  font-size: var(--m-fz);
+  border-radius: .5rem;
+
+  &[type="accent"] {
+    background: var(--accent-color);
+  }
+  
+  &[type="danger"] {
+    background: var(--danger-color);
+  }
+  
+  &[type="success"] {
+    background: var(--success-color);
+  }
+}

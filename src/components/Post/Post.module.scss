@@ -2,4 +2,21 @@
 
 .post {
   border: 2px solid var(--accent-color);
+  border-radius: .25rem;
+
+  min-height: 5.5rem;
+  max-height: 12.5rem;
+  padding: .5rem;
+}
+
+.title {
+  font-weight: var(--m-font);
+  display: block;
+  font-size: var(--l-fz);
+}
+
+.panelControls {
+  margin-top: .5rem;
+  display: flex;
+  gap: .5rem;
 }

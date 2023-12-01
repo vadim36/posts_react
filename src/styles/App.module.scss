@@ -1,0 +1,22 @@
+@use './root.css' as *;
+
+.mainTitle {
+  font-weight: 500;
+  font-size: var(--xl-fz);
+  text-align: center;
+  padding: .5rem;
+  display: block;
+  text-align: center;
+  border-bottom: 3px solid var(--secondary-color);
+  margin-bottom: .5rem;
+}
+
+.postsList {
+  display: block;
+  padding: 0 .75rem;
+
+  li:not(:last-child) {
+    display: block;
+    margin-bottom: .75rem;
+  }
+}

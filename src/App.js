@@ -1,24 +1,35 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useState, useEffect } from "react";
+import styles from './styles/App.module.scss';
 
 import Post from "./components/Post/Post";
 
 function App() {
-  const [postsList, setPostsList] = useState([
-    {id: 1, title: 'ЕВА01', body: 'lorem70'},
-    {id: 2, title: 'ЕВА02', body: 'lorem70'},
-    {id: 3, title: 'ЕВА03', body: 'lorem70'},
-    {id: 4, title: 'ЕВА04', body: 'lorem70'}
-  ]);
+  const [postsList, setPostsList] = useState([]);
+
+  async function setPosts() {
+    return fetch('https://jsonplaceholder.typicode.com/posts')
+      .then((responsive) => responsive.json())
+      .then((responsive) => setPostsList(responsive))
+  }
+
+  useEffect(() => {
+    setPosts();
+  }, []);
 
   return (
     <div id="App">
-      <h1>Посты:</h1>
-        {
-          postsList.map((postData) => {
-            return <Post postData={postData} key={postData.id}/>
-          })
-        }
+      <h1 className={styles.mainTitle}>Посты:</h1>
+      <article aria-description="Posts section">
+        <ul className={styles.postsList}>
+          {
+            postsList.map((postData) => {
+              return <li key={postData.id}>
+                <Post postData={postData}/>
+              </li>
+            })
+          }
+        </ul>
+      </article>
     </div>
   );
 }
